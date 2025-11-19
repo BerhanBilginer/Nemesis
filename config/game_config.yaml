@@ -1,0 +1,42 @@
+# Nemesis Game Configuration
+
+game:
+  title: "NEMESIS - Adaptive Boss Battle"
+  theme: "neo"
+  fps: 30
+  
+player:
+  lives: 5
+  speed: 2
+  bullet_speed: 1
+  
+boss:
+  enabled: true
+  use_ai: true
+  initial_health: 50
+  difficulty: "adaptive"  # adaptive, easy, medium, hard
+  
+ai:
+  # Reinforcement Learning
+  learning_rate: 0.1
+  discount_factor: 0.95
+  exploration_rate: 0.2
+  epsilon_decay: 0.995
+  
+  # Pattern Analysis
+  analysis_sessions: 10  # Number of recent sessions to analyze
+  min_sessions_for_training: 3
+  
+  # Training
+  save_model_every: 5  # Save after every N games
+  auto_save: true
+  
+data:
+  track_player_behavior: true
+  save_sessions: true
+  data_retention_days: 30
+  
+rendering:
+  background: "stars"  # stars, darkstars, matrix, snow, rain, bubbles, noise
+  show_fps: false
+  particle_effects: true
